@@ -13,6 +13,8 @@ API REST para gestionar un catálogo de productos y su stock, diseñada para ser
 - npm o yarn
 
 ## 📋 PROGRAMA QUE SE USO PARA EL DESPLIEGUE: railway
+<img width="1803" height="690" alt="image" src="https://github.com/user-attachments/assets/4bf1f94e-a5d7-4af9-b046-3759f1a70f92" />
+
 
 
 ## PARA QUE CORRA LAS API 🚀 
