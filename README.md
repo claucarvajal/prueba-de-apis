@@ -1,5 +1,7 @@
 # prueba-de-apis
 para fundacion de la mujer
+# prueba-de-apis
+para fundacion de la mujer
 # API de Gestión de Productos y Stock
 
 API REST para gestionar un catálogo de productos y su stock, diseñada para ser consumida desde aplicaciones web, móviles y otros servicios.
@@ -10,54 +12,15 @@ API REST para gestionar un catálogo de productos y su stock, diseñada para ser
 - MySQL (v5.7 o superior)
 - npm o yarn
 
-## 🚀 Instalación
+## 📋 PROGRAMA QUE SE USO PARA EL DESPLIEGUE: railway
 
-1. **Clonar o descargar el proyecto**
 
-2. **Instalar dependencias:**
-```bash
-npm install
-```
+## PARA QUE CORRA LAS API 🚀 
 
-3. **Configurar la base de datos:**
-   - Crear la base de datos en MySQL:
-   ```sql
-   CREATE DATABASE productos_db;
-   ```
-   - Ejecutar el script SQL para crear las tablas:
-   ```bash
-   mysql -u root -p productos_db < database/schema.sql
-   ```
-   O ejecutar el contenido de `database/schema.sql` directamente en MySQL.
+El servidor estará disponible en `https://prueba-de-apis-production.up.railway.app`
 
-4. **Configurar variables de entorno:**
-   - Copiar el archivo `.env.example` a `.env`:
-   ```bash
-   cp .env.example .env
-   ```
-   - Editar `.env` con tus credenciales de MySQL:
-   ```
-   DB_HOST=localhost
-   DB_USER=root
-   DB_PASSWORD=tu_password
-   DB_NAME=productos_db
-   DB_PORT=3306
-   PORT=3000
-   ```
-
-5. **Iniciar el servidor:**
-```bash
-npm start
-```
-
-Para desarrollo con recarga automática:
-```bash
-npm run dev
-```
-
-El servidor estará disponible en `http://localhost:3000`
-
-## 📚 Endpoints de la API
+## 📚 Endpoints de la API 
+POSTMAN
 
 ### 1. Crear un producto
 **POST** `/api/productos`
@@ -86,7 +49,7 @@ El servidor estará disponible en `http://localhost:3000`
 
 **Ejemplo:**
 ```
-GET http://localhost:3000/api/productos?pagina=2&limite=20
+GET https://prueba-de-apis-production.up.railway.app/api/productos?pagina=2&limite=20
 ```
 
 ### 3. Obtener un producto por ID
@@ -151,7 +114,7 @@ DELETE /api/productos/1?fisica=true
 
 ### Crear Producto
 1. Método: **POST**
-2. URL: `http://localhost:3000/api/productos`
+2. URL: `https://prueba-de-apis-production.up.railway.app/api/productos`
 3. Headers: `Content-Type: application/json`
 4. Body (raw JSON):
 ```json
@@ -168,15 +131,15 @@ DELETE /api/productos/1?fisica=true
 
 ### Obtener Todos los Productos
 1. Método: **GET**
-2. URL: `http://localhost:3000/api/productos`
+2. URL: `https://prueba-de-apis-production.up.railway.app/api/productos`
 
 ### Obtener Producto por ID
 1. Método: **GET**
-2. URL: `http://localhost:3000/api/productos/1`
+2. URL: `https://prueba-de-apis-production.up.railway.app/api/productos/1`
 
 ### Actualizar Producto
 1. Método: **PUT**
-2. URL: `http://localhost:3000/api/productos/1`
+2. URL: `https://prueba-de-apis-production.up.railway.app/api/productos/1`
 3. Body (raw JSON):
 ```json
 {
@@ -188,7 +151,7 @@ DELETE /api/productos/1?fisica=true
 
 ### Actualizar Stock (Entrada)
 1. Método: **PATCH**
-2. URL: `http://localhost:3000/api/productos/1/stock`
+2. URL: `https://prueba-de-apis-production.up.railway.app/api/productos/1/stock`
 3. Body (raw JSON):
 ```json
 {
@@ -200,7 +163,7 @@ DELETE /api/productos/1?fisica=true
 
 ### Actualizar Stock (Salida)
 1. Método: **PATCH**
-2. URL: `http://localhost:3000/api/productos/1/stock`
+2. URL: `https://prueba-de-apis-production.up.railway.app/api/productos/1/stock`
 3. Body (raw JSON):
 ```json
 {
@@ -212,11 +175,64 @@ DELETE /api/productos/1?fisica=true
 
 ### Eliminar Producto (Lógico)
 1. Método: **DELETE**
-2. URL: `http://localhost:3000/api/productos/1`
+2. URL: `https://prueba-de-apis-production.up.railway.app/api/productos/1`
 
 ### Eliminar Producto (Físico)
 1. Método: **DELETE**
-2. URL: `http://localhost:3000/api/productos/1?fisica=true`
+2. URL: `https://prueba-de-apis-production.up.railway.app/api/productos/1?fisica=true`
+
+
+
+
+
+
+## 🚀 Instalación ---esto es lo que se hace para el paso a paso en el LOCALHOST
+
+1. **Clonar o descargar el proyecto**
+
+2. **Instalar dependencias:**
+```bash
+npm install
+```
+
+3. **Configurar la base de datos:**
+   - Crear la base de datos en MySQL:
+   ```sql
+   CREATE DATABASE productos_db;
+   ```
+   - Ejecutar el script SQL para crear las tablas:
+   ```bash
+   mysql -u root -p productos_db < database/schema.sql
+   ```
+   O ejecutar el contenido de `database/schema.sql` directamente en MySQL.
+
+4. **Configurar variables de entorno:**
+   - Copiar el archivo `.env.example` a `.env`:
+   ```bash
+   cp .env.example .env
+   ```
+   - Editar `.env` con tus credenciales de MySQL:
+   ```
+   DB_HOST=switchback.proxy.rlwy.net
+   DB_USER=root
+   DB_PASSWORD=EmqjxEbSFydvUgfhxZTGEHIrGJnPFDWg
+   DB_NAME=railway
+   DB_PORT=51274
+   PORT=3000
+   ```
+
+   Nota: puerto configurado en despliegue: 8080
+
+5. **Iniciar el servidor:**
+```bash
+npm start
+```
+
+Para desarrollo con recarga automática:
+```bash
+npm run dev
+```
+
 
 ## 📊 Estructura de la Base de Datos
 
