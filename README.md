@@ -1,7 +1,5 @@
 # prueba-de-apis
 para fundacion de la mujer
-# prueba-de-apis
-para fundacion de la mujer
 # API de Gestión de Productos y Stock
 
 API REST para gestionar un catálogo de productos y su stock, diseñada para ser consumida desde aplicaciones web, móviles y otros servicios.
