@@ -84,7 +84,9 @@ const obtenerProductos = async (req, res) => {
     console.error('Error al obtener productos:', error);
     res.status(500).json({
       error: 'Error al obtener los productos',
-      detalle: error.message
+      detalle: error.message || 'Error desconocido',
+      codigo: error.code,
+      stack: process.env.NODE_ENV === 'development' ? error.stack : undefined
     });
   }
 };
@@ -110,7 +112,9 @@ const obtenerProductoPorId = async (req, res) => {
     console.error('Error al obtener producto:', error);
     res.status(500).json({
       error: 'Error al obtener el producto',
-      detalle: error.message
+      detalle: error.message || 'Error desconocido',
+      codigo: error.code,
+      stack: process.env.NODE_ENV === 'development' ? error.stack : undefined
     });
   }
 };
