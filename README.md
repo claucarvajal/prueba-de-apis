@@ -17,7 +17,7 @@ API REST para gestionar un catálogo de productos y su stock, diseñada para ser
 
 
 
-## PARA QUE CORRA LAS API 🚀 
+## PARA QUE CORRAN LAS API 🚀 
 
 El servidor estará disponible en `https://prueba-de-apis-production.up.railway.app`
 
