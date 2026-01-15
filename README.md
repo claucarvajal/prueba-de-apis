@@ -39,6 +39,8 @@ POSTMAN
 ```
 
 **Campos obligatorios:** `nombre`, `precio`, `stock`
+**Ejemplo**
+post https://prueba-de-apis-production.up.railway.app/api/productos
 
 ### 2. Obtener listado de productos
 **GET** `/api/productos`
@@ -57,11 +59,13 @@ GET https://prueba-de-apis-production.up.railway.app/api/productos?pagina=2&limi
 
 **Ejemplo:**
 ```
+get https://prueba-de-apis-production.up.railway.app/api/productos/1
 GET /api/productos/1
 ```
 
 ### 4. Actualizar información de un producto
 **PUT** `/api/productos/:id`
+put https://prueba-de-apis-production.up.railway.app/api/productos/1
 
 **Body (JSON) - Todos los campos son opcionales:**
 ```json
@@ -74,6 +78,7 @@ GET /api/productos/1
 
 ### 5. Actualizar el stock de un producto
 **PATCH** `/api/productos/:id/stock`
+https://prueba-de-apis-production.up.railway.app/api/productos/1/stock
 
 **Body (JSON):**
 ```json
@@ -99,6 +104,7 @@ GET /api/productos/1
 
 ### 6. Eliminar un producto
 **DELETE** `/api/productos/:id`
+https://prueba-de-apis-production.up.railway.app/api/productos/1
 
 **Eliminación lógica (por defecto):**
 ```
@@ -107,6 +113,7 @@ DELETE /api/productos/1
 
 **Eliminación física:**
 ```
+https://prueba-de-apis-production.up.railway.app/api/productos/1?fisica=true
 DELETE /api/productos/1?fisica=true
 ```
 
