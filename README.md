@@ -6,8 +6,9 @@ API REST para gestionar un catálogo de productos y su stock, diseñada para ser
 
 - Node.js (v14 o superior)
 - MySQL (v5.7 o superior)
-- npm o yarn
-
+- npm 
+- 
+# RAMA MASTER
 ## 🚀 Instalación
 
 1. **Clonar o descargar el proyecto**
